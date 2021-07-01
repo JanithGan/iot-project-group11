@@ -120,7 +120,10 @@ void demoLocationChange()
     latVal = lat_array[loc_iter];
     longVal = long_array[loc_iter];
 
-    if (loc_iter < (NUM_LOC - 1))
+    Serial.print("Travelled to : ");
+    Serial.println(loc_array[loc_iter]);
+
+    if (loc_iter < (num_loc - 1))
     {
       loc_iter++;
     }
@@ -128,9 +131,6 @@ void demoLocationChange()
     {
       loc_iter = 0;
     }
-
-    Serial.print("Travelled to : ");
-    Serial.println(loc_array[loc_iter]);
 
     parseLocationJSON();
     publishLocation();
