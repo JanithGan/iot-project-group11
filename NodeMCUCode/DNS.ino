@@ -4,13 +4,13 @@ void initMDNS()
   // Local mDNS hostname
   if (!MDNS.begin(mdns_hostname))
   {
-    Serial.println("\nError Setting up MDNS Responder!\n");
+    Serial.println("Error Setting up MDNS Responder!\n");
     while (1)
     {
       delay(1000);
     }
   }
-  Serial.println("\nmDNS Responder Started!\n");
+  Serial.println("mDNS Responder Started!\n");
 }
 
 // Start DNS server

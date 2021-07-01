@@ -52,4 +52,5 @@ void printTimeZone()
   Serial.print(timeZone);
   Serial.print(" ");
   Serial.println(UTCOffset);
+  Serial.println();
 }

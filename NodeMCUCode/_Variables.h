@@ -78,10 +78,18 @@ WiFiUDP ntpUDP;
 // Demo location change
 int loc_iter = 0;
 
+// Play HP
+int play_hp = 0;
+
 // American
-const char *loc_array[] = {"San Jose", "San Salvador", "Guatemala City", "Merida", "Veracruz", "Hidalgo"}; // 6
-const float lat_array[] = {9.9347, 13.7151, 14.6069, 20.9732, 18.0056, 20.0066};
-const float long_array[] = {-84.0875, -89.1548, -90.5169, -89.6248, -94.5553, -99.2188};
+const int num_loc = 5;
+const char *loc_array[] = {"San Jose", "San Salvador", "Merida", "Veracruz", "Hidalgo"}; // 5
+const float lat_array[] = {9.9347, 13.7151, 20.9732, 20.5089, 20.0066};
+const float long_array[] = {-84.0875, -89.1548, -89.6248, -94.5553, -97.4469, -99.2188};
+
+// const char *loc_array[] = {"San Jose", "San Salvador", "Guatemala City", "Merida", "Veracruz", "Hidalgo"}; // 6
+// const float lat_array[] = {9.9347, 13.7151, 14.6069, 20.9732, 18.0056, 20.0066};
+// const float long_array[] = {-84.0875, -89.1548, -90.5169, -89.6248, -94.5553, -99.2188};
 
 // Indian
 // char *loc_array[] = {"Vasai West India", "Bolivei East", "Vile Pale West", "Coloba", "Bandra Mumbai"}; // 5

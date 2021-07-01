@@ -40,8 +40,5 @@ void loop(void)
   handleServerClients();
 
   // Location
-  processLocation();
-
-  // Sleep
-  enterDeepSleep();
+  processLocationMode();
 }

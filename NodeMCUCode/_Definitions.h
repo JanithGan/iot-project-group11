@@ -8,7 +8,7 @@
 #define DEF_TZ_S 2 // Positive
 #define DEF_TZ_H 5
 #define DEF_TZ_M 30
-#define DEF_TZ_DELAY 900000 // 15 mins
+#define DEF_TZ_DELAY 45000 // 45 secs
 
 // Default sleep time
 #define START_H 0 // Sleep at 00:00
@@ -36,10 +36,10 @@
 // Device modes
 #define NORMAL_MODE 4
 #define DEMO_MODE 5
+#define SLEEP_MODE 6
 
 // Demo location change
-#define NUM_LOC 6
-#define DEMO_LOC_DELAY 10000 // 10 secs
+#define DEMO_LOC_DELAY 20000 // 20 secs
 
 // Colors
 #define OFF 0x000000

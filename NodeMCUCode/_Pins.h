@@ -4,10 +4,10 @@
 #define LED_B_PIN D3
 
 // Buzzer pin
-#define BUZZER_PIN D5
+#define BUZZER_PIN D8
 
 // WiFi reset pin
-#define WIFI_R_PIN D0
+#define WIFI_R_PIN D6
 
 // Location mode pin
-#define LOC_MS_PIN D8
+#define LOC_MS_PIN D7
