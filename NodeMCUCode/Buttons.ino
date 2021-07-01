@@ -11,13 +11,13 @@ void initButtons()
 }
 
 // Actions for reset button press
-void ICACHE_RAM_ATTR pressedWiFiR()
+ICACHE_RAM_ATTR void pressedWiFiR()
 {
   wifiReset();
 }
 
 // Attach for location mode switch button
-void ICACHE_RAM_ATTR pressedLocMS()
+ICACHE_RAM_ATTR void pressedLocMS()
 {
   switchLocationMode();
 }

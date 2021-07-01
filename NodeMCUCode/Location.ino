@@ -187,6 +187,8 @@ void switchLocationMode()
 
     loc_mode = SLEEP_MODE;
     preSleepMillis = millis();
+    preLocMillis = millis();
+    resetLocation();
     break;
 
   case SLEEP_MODE:
