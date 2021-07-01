@@ -89,6 +89,13 @@ void enterDeepSleep()
 
       long sleepTime = (WAKE_H - tHour) * 3600 + (WAKE_M - tMinute) * 60 + (WAKE_S - tSecond);
 
+      Serial.print("\nCurrent Time : ");
+      Serial.print(tHour);
+      Serial.print(":");
+      Serial.print(tMinute);
+      Serial.print(":");
+      Serial.println(tSecond);
+
       Serial.print("\nEntering Deep Sleep Mode for : ");
       Serial.print(sleepTime);
       Serial.println(" seconds");

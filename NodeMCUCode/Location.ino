@@ -129,7 +129,7 @@ void demoLocationChange()
       loc_iter = 0;
     }
 
-    Serial.print("\nTravelled to : ");
+    Serial.print("Travelled to : ");
     Serial.println(loc_array[loc_iter]);
 
     parseLocationJSON();
@@ -138,7 +138,7 @@ void demoLocationChange()
 }
 
 // Process location data
-void processLocation()
+void processLocationMode()
 {
   switch (loc_mode)
   {
@@ -148,7 +148,20 @@ void processLocation()
     break;
 
   case DEMO_MODE:
+    if (play_hp)
+    {
+      playHP();
+      play_hp = 0;
+    }
     demoLocationChange();
+    break;
+
+  case SLEEP_MODE:
+    getSerialLocation();
+    publishLocationRecur();
+
+    // Sleep
+    enterDeepSleep();
     break;
   }
 }
@@ -161,13 +174,23 @@ void switchLocationMode()
   case NORMAL_MODE:
     removeAlertLevel();
     Serial.println("\nLocation Mode Switch Button Pressed\n");
-    Serial.println("Starting Demo Journey...");
-    playHP();
+    Serial.println("Starting Demo Journey...\n");
 
     loc_mode = DEMO_MODE;
+    play_hp = 1;
     break;
 
   case DEMO_MODE:
+    removeAlertLevel();
+    Serial.println("\nLocation Mode Switch Button Pressed\n");
+    Serial.println("Ending Demo Journey...\n");
+
+    loc_mode = SLEEP_MODE;
+    preSleepMillis = millis();
+    break;
+
+  case SLEEP_MODE:
+    removeAlertLevel();
     Serial.println("\nLocation Mode Switch Button Pressed\n");
     Serial.println("Resetting...");
 

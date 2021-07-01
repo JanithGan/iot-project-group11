@@ -78,6 +78,9 @@ WiFiUDP ntpUDP;
 // Demo location change
 int loc_iter = 0;
 
+// Play HP
+int play_hp = 0;
+
 // American
 const char *loc_array[] = {"San Jose", "San Salvador", "Guatemala City", "Merida", "Veracruz", "Hidalgo"}; // 6
 const float lat_array[] = {9.9347, 13.7151, 14.6069, 20.9732, 18.0056, 20.0066};
