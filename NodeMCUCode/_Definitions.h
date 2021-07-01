@@ -8,7 +8,7 @@
 #define DEF_TZ_S 2 // Positive
 #define DEF_TZ_H 5
 #define DEF_TZ_M 30
-#define DEF_TZ_DELAY 90000 // 1 min 30 secs
+#define DEF_TZ_DELAY 45000 // 45 secs
 
 // Default sleep time
 #define START_H 0 // Sleep at 00:00

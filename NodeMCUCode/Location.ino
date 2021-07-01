@@ -185,10 +185,11 @@ void switchLocationMode()
     Serial.println("\nLocation Mode Switch Button Pressed\n");
     Serial.println("Ending Demo Journey...\n");
 
-    loc_mode = SLEEP_MODE;
     preSleepMillis = millis();
     preLocMillis = millis();
     resetLocation();
+
+    loc_mode = SLEEP_MODE;
     break;
 
   case SLEEP_MODE:
